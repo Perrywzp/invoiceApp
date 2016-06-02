@@ -39,6 +39,25 @@
         },0);
         console.log(count);
 
+        var amounts = invoiceItemCollection.map(function(model){
+            return model.get('quantity') * model.get('price');
+        });
+        console.log(amounts);
+
+        var total_amount = _.reduce(amounts, function(memo, val){
+            return memo + val;
+        }, 0);
+        console.log(total_amount);
+
+        amounts = invoiceItemCollection.chain()
+            .map(function(model){
+                return model.get('quantity') * model.get('price');
+            })
+            .reduce(function(memo, val){
+                return memo + val;
+            })
+            .value();
+        console.log(amounts);
     });
 })(jQuery);
 
