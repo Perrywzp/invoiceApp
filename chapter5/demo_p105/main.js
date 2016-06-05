@@ -69,7 +69,7 @@ var InvoiceItemView = Backbone.View.extend({
 //when document is ready create the model and show the view.
 $(function () {
 
-    var invocieItemModel = new InvoiceItemModel({
+    var invoiceItemModel = new InvoiceItemModel({
         description: 'Farmer Figure',
         price: 8,
         quantity: 1
@@ -77,10 +77,10 @@ $(function () {
 
     $('body')
         .append(new InvoiceItemView({
-            model: invocieItemModel
+            model: invoiceItemModel
         }).render().el)
         .append(new InvoiceItemFormView({
-            model: invocieItemModel
+            model: invoiceItemModel
         }).render().el);
 
 });

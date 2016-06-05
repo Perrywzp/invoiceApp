@@ -1,0 +1,13 @@
+#invoice-list-pane{
+    float:left;
+    width:45%;
+    padding:10px;
+    background: #ccc;
+}
+#invoice-pane{
+    float:left;
+    width:45%;
+    padding: 10px;
+    margin-left: 10px;
+    background: #ccc;
+}
